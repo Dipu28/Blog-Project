@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Post
+from .models import Post , Category
 from django.views.generic import (ListView,DeleteView,
                                   CreateView,UpdateView,DeleteView)
 from .forms import PostForm ,EditForm
@@ -13,6 +13,10 @@ class HomeView(ListView):
     ordering = ['-post_date']
     # ordering = ['-id']
 
+def CategoryView(request, cats):
+    category_posts = Post.objects.filter(category=cats)
+    return render(request,'categories.html',{'cats':cats.title,'category_posts':category_posts})
+
 class ArticleDetailView(DeleteView):
     model = Post
     template_name = 'article_details.html'
@@ -23,6 +27,12 @@ class AddPostView(CreateView):
     template_name = 'add_post.html'
     # fields = '__all__'
     # fields = ('title','body')
+
+
+class AddCategoryView(CreateView): 
+    model = Category
+    template_name = 'add_category.html'
+    fields = '__all__'
 
 class UpdatePostView(UpdateView):
     model = Post
