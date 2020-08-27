@@ -1,4 +1,5 @@
 <!doctype html>
+{% load static %}
 <html lang="en">
   <head>
     <!-- Required meta tags -->
@@ -7,9 +8,11 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'blogapp/css/style.css' %}">
 
     <title>{% block title %} TrobuleMaker {% endblock %}</title>
   </head>
+  
   <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <a class="navbar-brand" href="{% url 'home' %}">My TrobuleMaker Blog!</a>
@@ -46,8 +49,20 @@
               </li>
 
               
-              <li class="nav-item">
-                <a class="nav-link" href="{% url 'edit_profile' %}">Edit Profle</a>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Profile
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  
+                  {% if user.profile.id %}
+                    <a class="dropdown-item" href="{% url 'edit_profile_page' user.profile.id %}">Edit Profile</a>
+                    <a class="dropdown-item" href="{% url 'show_profile' user.profile.id %}">Profile</a>
+                  {% else %}
+                    <a class="dropdown-item" href="{% url 'create_profile_page' %}">Create Profile</a>
+                  {% endif %}
+                  <a class="dropdown-item" href="{% url 'edit_profile' %}">Setting</a>
+                </div>
               </li>
 
               <li class="nav-item">
@@ -77,8 +92,6 @@
 
     </div>
 
-
-    
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

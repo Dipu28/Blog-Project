@@ -52,9 +52,9 @@ By:
     <div class="row no-gutters">
       <div class="col-md-2">
         {% if post.author.profile.profile_pic %}
-            <img src="{{ post.author.profile.profile_pic.url }}"class="card-img">
+            <img src="{{ post.author.profile.profile_pic.url }}" class="card-img">
         {% else %}
-            <img src="{% static 'blogapp/images/blank-profile.png' %}"class="card-img">
+            <img src="{% static 'blogapp/images/blank-profile.png' %}" class="card-img">
         {% endif %}
         
         </div>
@@ -66,8 +66,10 @@ By:
             </h5>
 
             <p class="small text-muted">
+                <a href="{% url 'show_profile' post.author.profile.id %}">Profile</a>
+
                 {% if post.author.profile.facebook_url %}
-                    <a href="{{ post.author.profile.facebook_url }}">Facebook</a> 
+                   | <a href="{{ post.author.profile.facebook_url }}">Facebook</a> 
                 {% endif %}
 
                 {% if post.author.profile.twitter_url %}
