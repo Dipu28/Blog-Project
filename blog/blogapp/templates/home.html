@@ -23,7 +23,8 @@
     {% endif %}                            
     <br/>
     <!-- To make it look shorter on the home page -->
-    {{ post.body|slice:":200"|safe }}
+    {{ post.snippet }}
+
     </li>
 
     {% endfor %}
