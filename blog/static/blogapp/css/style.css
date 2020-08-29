@@ -1,0 +1,26 @@
+/* 
+*{
+    font-family: 'Montserrat', sans-serif;
+} */
+
+
+html,body {
+    margin: 0%;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif !important;
+    /* overflow: hidden; */
+}
+
+/* GLOBAL ITEMS */
+a{
+    text-decoration: none !important;
+}
+
+.dipu1 {
+    list-style-type: none;
+}
+
+.dipu2 {
+    text-align: center;
+    padding: 15px 0;
+}

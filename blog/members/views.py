@@ -6,6 +6,7 @@ from django.urls import reverse_lazy
 from .forms import SignUpForm ,EditProfileForm,PasswordChangingForm, ProfilePageForm
 from blogapp.models import Profile
 
+
 # Create your views here.
 
 class CreateProfilePageView(generic.CreateView):
@@ -14,6 +15,7 @@ class CreateProfilePageView(generic.CreateView):
     template_name = 'registration/create_user_profile_page.html'
     # fields = '__all__'
 
+    # This is code helps with id (match)
     def form_valid(self, form):
         form.instance.user = self.request.user
         return super().form_valid(form)
