@@ -2,25 +2,28 @@
 {% block title %}Create New blog{% endblock %}
 {% block content %}
 
+<div class="dipu7">
+    
 {% if user.is_authenticated %}
-    <h1 class="dipu2">Add New Post....</h1>
-    <br/>
-    <div class="form-group">
-        <form method="POST" enctype="multipart/form-data">
-            {% csrf_token %}
-            {{ form.media}}
-            {{ form.as_p}}
-            <button class="btn btn-secondary">Post</button>
-        </form>
-    </div>
-    <script>
-        var name = "{{ user.id }}";
-        document.getElementById('elder').value= name; 
-    </script>
+<h1 class="dipu2">Add New Post....</h1>
+<br/>
+<div class="form-group">
+    <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.media}}
+        {{ form.as_p}}
+        <button class="btn btn-secondary">Post</button>
+    </form>
+</div>
+<script>
+    var name = "{{ user.id }}";
+    document.getElementById('elder').value= name; 
+</script>
 
 {% else %}
 
-    You're Not Allowed Here! (And You Know It....)
-    
+You're Not Allowed Here! (And You Know It....)
+
 {% endif %}
+</div>
 {% endblock %}

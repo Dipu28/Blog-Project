@@ -4,7 +4,8 @@
 
 {% block content %}
 
-
+<div class="dipu7">
+    
 <h1 class="dipu2">{{ post.title }}</h1>
 By:
     {{ post.author.first_name }}
@@ -66,18 +67,18 @@ By:
                     <a href="{% url 'show_profile' post.author.profile.id %}">Profile</a>
 
                     {% if post.author.profile.facebook_url %}
-                        | <a href="{{ post.author.profile.facebook_url }}">Facebook</a> 
+                        <a href="{{ post.author.profile.facebook_url }}"><i class="fa fa-facebook big" aria-hidden="true"></i></a> 
                     {% endif %}
 
                     {% if post.author.profile.twitter_url %}
-                        | <a href="{{ post.author.profile.twitter_url }}">Twitter</a> 
+                        <a href="{{ post.author.profile.twitter_url }}"><i class="fa fa-twitter big" aria-hidden="true"></i></a> 
                     {% endif %}
 
                     {% if post.author.profile.instagram_url %}
-                        | <a href="{{ post.author.profile.instagram_url }}">Instagram</a> 
+                        <a href="{{ post.author.profile.instagram_url }}"><i class="fa fa-instagram big" aria-hidden="true"></i></a> 
                     {% endif %}    
                     {% if post.author.profile.pinterest_url  %}
-                        | <a href="{{ post.author.profile.pinterest_url }}">Pinterest</a>
+                        <a href="{{ post.author.profile.pinterest_url }}"><i class="fa fa-pinterest-p big" aria-hidden="true"></i></a>
                     {% endif %}
                 </p>
                 <p class="card-text">
@@ -105,4 +106,6 @@ By:
     <a href="{% url 'add_comment' post.pk %}">Add Comment</a>
 {% endif %}
 <br/><br/>
+
+</div>
 {% endblock %}

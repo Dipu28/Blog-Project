@@ -2,19 +2,22 @@
 {% block title %}Create New Profile Page{% endblock %}
 {% block content %}
 
+<div class="dipu7">
+    
 {% if user.is_authenticated %}
-    <h1 class="dipu2">Create Profile Page....</h1>
-    <br/>
-    <div class="form-group">
-        <form method="POST" enctype="multipart/form-data">
-            {% csrf_token %}
-            {{ form.as_p}}
-            <button class="btn btn-secondary">Create</button>
-        </form>
-    </div>
+<h1 class="dipu2">Create Profile Page....</h1>
+<br/>
+<div class="form-group">
+    <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p}}
+        <button class="btn btn-secondary">Create</button>
+    </form>
+</div>
 {% else %}
 
-    You're Not Allowed Here! (And You Know It....)
-    
+You're Not Allowed Here! (And You Know It....)
+
 {% endif %}
+</div>
 {% endblock %}

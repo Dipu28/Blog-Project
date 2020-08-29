@@ -1,26 +1,180 @@
-/* 
-*{
-    font-family: 'Montserrat', sans-serif;
+
+:root{
+
+    /* Theme colors */
+    --text-gray:#d63031;
+    --text-light:#ff7675;
+    --bg-color:#dfe6e9;
+    --white:#ffffff;
+    --midnight:#2d3436;
+
+    /* Gradient Color */
+    --sky: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+}
+
+/* .dipu6{
+    background-color:#f5f6fa;
 } */
 
+.dipu7{
+    /* display: block; */
+    padding: 1.2rem;
+    margin: 5rem 5rem;
+}
 
+.dipu{
+    padding: 1.2rem;
+}
 html,body {
     margin: 0%;
     box-sizing: border-box;
-    font-family: 'Roboto', sans-serif !important;
+    font-family: 'Montserrat', sans-serif!important;
     /* overflow: hidden; */
 }
+
 
 /* GLOBAL ITEMS */
 a{
     text-decoration: none !important;
+    color: black;
 }
+
+h1,h3{
+    font-family: 'Krona One', sans-serif;
+}
+
+
+button {
+    border: none;
+    font-size: 1rem;
+    border-radius: 2rem;
+    padding: 1rem 3rem;
+    cursor: pointer;
+}
+
+span{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+/* 
+.container{
+    margin: 0 5vw;
+} */
+/*  */
+
 
 .dipu1 {
     list-style-type: none;
 }
 
 .dipu2 {
+    color:var(--text-gray);
     text-align: center;
-    padding: 15px 0;
+    /* padding: 15px 0; */
 }
+
+.dipu3{
+    font-family: 'Krona One', sans-serif;
+    font-size: 1.4rem;
+}
+
+.dipu4{
+    font-size: 1.2rem;
+}
+
+.dipu5{
+    background-color: var(--midnight);
+}
+.dipu5 a{
+    color: #ffffff;
+}
+/* 
+.nav-link:hover{
+    background-color: var(--white);
+} */
+
+.big{
+    color: var(--text-gray) ;
+    font-size: x-large;
+    padding: 0 .2rem;
+}
+
+.big:hover{
+    color: #a1c4cf;
+}
+
+
+/* -----------------Main Content----------------- */
+
+/* Site Title */
+
+main .site-title{
+    background: url(../images/lucas-benjamin-wQLAGv4_OYs-unsplash.jpg);
+    background-size: cover;
+    height: 110vh;
+    display: flex;
+    justify-content: center;
+}
+
+main .site-title .site-background{
+    padding-top: 10rem;
+    text-align: center;
+    color: var(--white);
+}
+
+main .site-title h1,h3{
+    margin: .3rem;
+}
+
+main .site-title .new{
+    margin: 1.8rem;
+    background: var(--sky);
+    border-radius: 2rem;
+    padding: 1rem 3rem;
+}
+
+main .site-title .new:hover{
+    background: transparent;
+    border:  1px solid var(--white);
+    color: var(--white);
+}
+/* Site Title */
+
+/* Blog Carousel */
+main .blog{
+    background: url(../images/pexels-miguel-á-padriñán-19670.jpg);
+    background-repeat: no-repeat;
+    background-position: right;
+    height: 100vh;
+    width: 100%;
+}
+
+main .blog .blog-post {
+    padding-top: 6rem;
+}
+
+main .blog-post .blog-content{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 80%;
+    margin: 3rem 2rem;
+    box-shadow: 0 15px 20px rgba(0,0,0,0.2);
+}
+
+main .blog-content .blog-title{
+    padding: 2rem 0;
+}
+
+main .blog-content .new-blog{
+    padding: .7rem 2rem;
+    background: var(--sky);
+    margin: .5rem;
+}
+
+main .blog-content span{
+    display: block;
+}
+
+/* Blog Carousel */
+
+/* -----------------Main Content----------------- */

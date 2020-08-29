@@ -2,6 +2,8 @@
 {% block title %}Delete Blog Post{% endblock %}
 {% block content %}
 
+<div class="dipu7">
+     
 {% if user.is_authenticated %}
 {% if user.id == post.author.id %}
     <h1 class="dipu2">Delete Post....</h1>
@@ -22,5 +24,6 @@ You're Not Allowed Here! (And You Know It....)
 {% else %}
     You're Not Allowed Here! (And You Know It....)
 {% endif %}    
+</div>
 
 {% endblock %}

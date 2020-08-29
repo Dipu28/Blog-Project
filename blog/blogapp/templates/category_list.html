@@ -2,10 +2,13 @@
 {% block title %}Blog Categories{% endblock %}
 {% block content %}
 
-<h1 class="dipu2">Blog Categories</h1>
+<div class="dipu7">
 
-{% for item in cat_menu_list %}
-    <h4><a class="dropdown-item" href="{% url 'category' item %}">{{ item }}</a></h4>
-{% endfor%}
+    <h1 class="dipu2">Blog Categories</h1>
+
+    {% for item in cat_menu_list %}
+        <h4><a class="dropdown-item" href="{% url 'category' item %}">{{ item }}</a></h4>
+    {% endfor%}
+</div>
 
 {% endblock %}

@@ -2,7 +2,8 @@
 {% block title %}Create New Blog Category{% endblock %}
 {% block content %}
 
-{% if user.is_authenticated %}
+<div class="dipu7">
+{% if user.is_authenticated %}    
     <h1 class="dipu2">Add Category....</h1>
     <br/>
     <div class="form-group">
@@ -19,4 +20,5 @@
     You're Not Allowed Here! (And You Know It....)
     
 {% endif %}
+</div>
 {% endblock %}
