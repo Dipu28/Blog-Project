@@ -7,7 +7,8 @@
 
 <main>
 
-<!------------------------------- Main Content --------------------------->
+
+<!-------------------------------Site title --------------------------->
 
     <section class="site-title">
         <div class="site-background">
@@ -17,7 +18,11 @@
             <a class="btn new" href="{% url 'category-list' %}">Explore</a>
         </div>
     </section>
-    
+
+
+<!-------------------------------Site title --------------------------->
+
+
 <!------------------------------- Blog Carousel --------------------------->
 
 <section>
@@ -57,7 +62,7 @@
                     </div>
                 </div>
                 <div class="blog-content">
-                    <img src="{% static 'blogapp/images/pexels-pixabay-36717.jpg' %}" alt="Post-1">
+                    <img src="{% static 'blogapp/images/pexels-pixabay-36717.jpg' %}"alt="Post-1">
                     <div class="blog-title">
                         <h3>Nature</h3>
                         <button class="new new-blog">Click</button>
@@ -65,32 +70,134 @@
                     </div>
                 </div>
             </div>
-            <div class="owl-navigation">
-                <span class="owl-nav-prev">
-                    <i class="fas fa-long-arrow-alt-left"></i>
-                </span>
-                <span class="owl-nav-next">
-                    <i class="fas fa-long-arrow-alt-right"></i>
-                </span>
-            </div>
+            <!-- <div class="owl-navigation">
+                <span class="owl-nav-prev"><i class="fa fa-long-arrow-alt-left"></i></span>
+                <span class="owl-nav-next"><i class="fa fa-long-arrow-alt-right"></i></span>
+            </div> -->
         </div>
     </div>
 </section>
 
-<!------------------------------- Blog Carousel --------------------------->
+<!-----------------x-------------- Blog Carousel ------------------x-------------->
+
+<!-------------------------------Site Content --------------------------->
+
+<section class="container">
+    <div class="site-content">
+        <div class="posts">
+ <div class="post-content">
+                <div class="post-image">
+                    <div>
+                        <img class="img" src="{% static '/blogapp/images/pexels-pixabay-36717.jpg' %}" alt="Post-2">
+                    </div>
+                    <div class="post-info flex-row">
+                        <span><i class="fa fa-user text-grey"></i>&nbsp;&nbsp;Admin</span>
+                        <span><i class="fa fa-calendar text-grey" aria-hidden="true"></i>&nbsp;&nbsp;Aug 14 2020</span>
+                        <span>2 Comments</span>
+                    </div>
+                </div>
+                <div class="post-title">
+                    <a href="#"><strong>Why should boys have all the fun?</strong></a>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, velit?
+                        Voluptatibus, maiores, repellendus, quibusdam delectus itaque blanditiis accusantium
+                        a fugiat deleniti accusamus maxime doloribus quod praesentium voluptatem nisi dolore perferendis?
+                        Delectus suscipit dolorum blanditiis a deserunt natus minus pariatur labore.
+                    </p>
+                    <!-- <button class="btn new post-new"></button> -->
+                    <a class="btn new post-new" href="#">Read More &nbsp; <i class="fa fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <hr>           
+ <div class="post-content">
+                <div class="post-image">
+                    <div>
+                        <img class="img" src="{% static '/blogapp/images/pexels-vlad-alexandru-popa-1402787.jpg' %}" alt="Post-2">
+                    </div>
+                    <div class="post-info flex-row">
+                        <span><i class="fa fa-user text-grey"></i>&nbsp;&nbsp;Admin</span>
+                        <span><i class="fa fa-calendar text-grey" aria-hidden="true"></i>&nbsp;&nbsp;Aug 14 2020</span>
+                        <span>2 Comments</span>
+                    </div>
+                </div>
+                <div class="post-title">
+                    <a href="#"><strong>Why should boys have all the fun?</strong></a>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, velit?
+                        Voluptatibus, maiores, repellendus, quibusdam delectus itaque blanditiis accusantium
+                        a fugiat deleniti accusamus maxime doloribus quod praesentium voluptatem nisi dolore perferendis?
+                        Delectus suscipit dolorum blanditiis a deserunt natus minus pariatur labore.
+                    </p>
+                    <!-- <button class="btn new post-new"></button> -->
+                    <a class="btn new post-new" href="#">Read More &nbsp; <i class="fa fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <hr>           
+        </div>
+        <aside class="sidebar">
+            <div class="category">
+                <h2>Category</h2>
+                <ul class="category-list">
+                    {% for item in cat_menu %}
+                    <li><a class="list-items" href="{% url 'category' item %}">{{ item }}</a></li>
+                    {% endfor%}
+                </ul>
+            </div>
+            <div class="popular-post">
+                <h2>Popular Post</h2>
+                <div class="post-content">
+                    <div class="post-image">
+                        <div>
+                            <img class="img" src="{% static '/blogapp/images/pexels-pixabay-36717.jpg' %}" alt="Post-2">
+                        </div>
+                        <div class="post-info flex-row">
+                            <!-- <span><i class="fa fa-user text-grey"></i>&nbsp;&nbsp;Admin</span> -->
+                            <span><i class="fa fa-calendar text-grey" aria-hidden="true"></i>&nbsp;&nbsp;Aug 14 2020</span>
+                            <span>2 Comments</span>
+                        </div>
+                    </div>
+                    <div class="post-title">
+                        <a href="#"><strong>New Thing Happens</strong></a>
+                      </div>
+                </div>
+                <div class="post-content">
+                    <div class="post-image">
+                        <div>
+                            <img class="img" src="{% static '/blogapp/images/pexels-pixabay-36717.jpg' %}" alt="Post-2">
+                        </div>
+                        <div class="post-info flex-row">
+                            <!-- <span><i class="fa fa-user text-grey"></i>&nbsp;&nbsp;Admin</span> -->
+                            <span><i class="fa fa-calendar text-grey" aria-hidden="true"></i>&nbsp;&nbsp;Aug 14 2020</span>
+                            <span>2 Comments</span>
+                        </div>
+                    </div>
+                    <div class="post-title">
+                        <a href="#"><strong>New Thing Happens</strong></a>
+                      </div>
+                </div>
+                <div class="post-content">
+                    <div class="post-image">
+                        <div>
+                            <img class="img" src="{% static '/blogapp/images/pexels-pixabay-36717.jpg' %}" alt="Post-2">
+                        </div>
+                        <div class="post-info flex-row">
+                            <!-- <span><i class="fa fa-user text-grey"></i>&nbsp;&nbsp;Admin</span> -->
+                            <span><i class="fa fa-calendar text-grey" aria-hidden="true"></i>&nbsp;&nbsp;Aug 14 2020</span>
+                            <span>2 Comments</span>
+                        </div>
+                    </div>
+                    <div class="post-title">
+                        <a href="#"><strong>New Thing Happens</strong></a>
+                      </div>
+                </div>
+            </div>
+        </aside>
+    </div>
+</section>
 
 
-
-
-<!-------------------------------Site title --------------------------->
-
-</main>
-
-<!------------------------------- Main Content --------------------------->
-
+<!-------------------------------Site Content --------------------------->
 
 <section>
-    <!-- <div class="dipu7"> -->
+    <div class="dipu7">
         <h1 class="dipu2">Post</h1>
         <ul>
             {% for post in object_list %}
@@ -115,7 +222,12 @@
                 </li>
             {% endfor %}
         </ul>
-    <!-- </div> -->
-    
+    </div>
 </section>
+
+</main>
+
+<!------------------------------- Main Content --------------------------->
+
+
 {% endblock %}
