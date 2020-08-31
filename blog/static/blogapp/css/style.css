@@ -19,18 +19,54 @@
 } */
 
 .dipu7{
-    /* display: block; */
-    padding: 1.2rem;
-    margin: 5rem 5rem;
+    padding: 1.2rem 1.2rem !important;
+    margin: 5rem 5rem !important;
 }
 
+
+/* Sticky-Nav */
+
 .dipu{
-    padding: 1.2rem;
+    padding: .8rem;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+    /* background-color: rgba(255, 255, 255, 0.98); */
+    box-shadow: 0 5px 5px #272626;
 }
+
+/* .dipu{
+    padding: 1.2rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+} */
+
+
+/* Sticky-Nav */
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+section{
+    /* White spacing */
+    /* We will add white space using padding(because we want to add a background image(Generally we use margin for making space b/w elements)) */
+    padding: 50px 0;
+}
+  
+
 html,body {
     margin: 0%;
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif!important;
+    text-rendering:optimizeLegibility;
+    overflow-x: hidden;
     /* overflow: hidden; */
 }
 
@@ -50,8 +86,19 @@ a{
     color: black;
 }
 
+h1{
+    margin-top: 0;
+    margin-bottom: 20px;
+    /* color: #fff; */
+    font-size:240%;
+    word-spacing: 4px;
+    letter-spacing: 1px;
+}
+
 h1,h3{
     font-family: 'Krona One', sans-serif;
+    text-transform: uppercase;
+    font-weight: 100;
 }
 
 
@@ -66,8 +113,8 @@ button {
 span{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-/* 
-.container{
+
+/* .container{
     margin: 0 5vw;
 } */
 
@@ -76,17 +123,14 @@ span{
 }
 
 /*  */
-
 /* 
-.dipu1 {
-    list-style-type: none;
+.dipu {
+    width: 100%;
+    position: fixed;
+    background: #000000 !important;
+    overflow: hidden;
+    transition: 0.3s;
 } */
-
-.dipu2 {
-    color:var(--text-gray);
-    text-align: center;
-    /* padding: 15px 0; */
-}
 
 .dipu3{
     font-family: 'Krona One', sans-serif;
@@ -94,11 +138,12 @@ span{
 }
 
 .dipu4{
-    font-size: 1.2rem;
+    font-size: .8rem;
 }
 
 .dipu5{
     background-color: var(--midnight);
+    font-size: .8rem;
 }
 .dipu5 a{
     color: #ffffff;
@@ -112,11 +157,30 @@ span{
     color: var(--text-gray) ;
     font-size: x-large;
     padding: 0 .2rem;
+    text-align: center;
 }
 
 .big:hover{
     color: #a1c4cf;
 }
+
+.dipu4 li:link,
+.dipu4 li:visited {
+  /* giving space b/w text and the bottom-border */
+  padding: 8px 0;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 90%;
+  border-bottom: 2px solid transparent ;
+  transition: border-bottom 1s;
+}
+
+.dipu4 li:hover,
+.dipu4 li:active{
+  border-bottom: 2px solid var(--text-gray);
+}
+
 
 
 /* -----------------Main Content----------------- */
@@ -124,10 +188,13 @@ span{
 /* Site Title */
 
 main .site-title{
-    background: url(../images/lucas-benjamin-wQLAGv4_OYs-unsplash.jpg);
+    /* background: url(../images/lucas-benjamin-wQLAGv4_OYs-unsplash.jpg); */
+    background-image:linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)),url(../images/lucas-benjamin-wQLAGv4_OYs-unsplash.jpg);
     background-size: cover;
-    height: 110vh;
-    display: flex;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100vh;
+    display: flex ;
     justify-content: center;
 }
 
@@ -164,10 +231,10 @@ main .blog{
     height: 100vh;
     width: 100%;
 }
-
+/* 
 main .blog .blog-post {
     padding-top: 6rem;
-}
+} */
 
 main .blog-post .blog-content{
     display: flex;
@@ -205,7 +272,7 @@ main .site-content{
 
 main .post-content{
     width: 100%;
-    margin-top: 2rem;
+    /* margin-top: 2rem; */
     /* margin-bottom: 5rem; */
 }
 

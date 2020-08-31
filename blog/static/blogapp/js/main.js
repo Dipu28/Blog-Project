@@ -31,5 +31,12 @@ $(document).ready(function(){
             scrollTop:0
         },1);
     });
+    // $(window).scroll(function(){
+    //     if ($(window).scrollTop()>0){
+    //         $('.dipu')
+    //     }
+    // })
 });
+
+
 

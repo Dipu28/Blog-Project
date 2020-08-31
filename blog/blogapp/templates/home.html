@@ -197,12 +197,12 @@
 <!-------------------------------Site Content --------------------------->
 
 <section>
-    <div class="dipu7">
-        <h1 class="dipu2">Post</h1>
+    <div class="container">
+        <h1>Post</h1>
         <ul>
             {% for post in object_list %}
         
-                <li class="dipu1"><a href="{% url 'article-detail' post.pk %}">{{ post.title }}</a>
+                <li><a href="{% url 'article-detail' post.pk %}">{{ post.title }}</a>
             
                     - <a href="{% url 'category' post.category %}">{{post.category}}</a>
         
